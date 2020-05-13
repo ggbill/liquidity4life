@@ -1,0 +1,44 @@
+.results-container{
+    color: rgba(0,0,0,.90);
+    margin: 24px 0 24px 0;
+}
+
+table{
+    width:100%;
+    border-spacing: 0;
+}
+
+td {
+    width:20%;
+    padding: 2px 24px 2px 0;
+    // border: solid 1px black;
+}
+
+td.wide{
+    width:40%;
+}
+
+tr.spacer-row{
+    height:10px;
+}
+
+tr.shaded-row{
+    background-color: #d0d0d0;
+}
+
+#action-section{
+    margin: 48px 0 150px 0;
+}
+
+#action-section a{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#document-store-link-section{
+    padding-top:24px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+

@@ -1,0 +1,16 @@
+<ul  class="breadcrumbs-wizard uppercase">
+    <li  *ngFor="let path of breadCrumbPaths; let i=index"
+         [class.active]="(i === currentActiveIndex || i===0) && currentActiveIndex !== lastIndex-1 "
+  
+         [class.last]="currentActiveIndex === lastIndex-1 && currentActiveIndex !== -1 && i === currentActiveIndex"
+  
+         [class.disabled]="i > currentActiveIndex && currentActiveIndex !== lastIndex-1"
+  
+         [class.done]="i < currentActiveIndex || currentActiveIndex === -1 && currentActiveIndex !== lastIndex-1">
+      <div class="breadcrumb-item">
+        <a (click)="navigateToNextStep(path.path, i,currentActiveIndex)">{{path.name}}</a>
+      </div>
+  
+    </li>
+  
+  </ul>

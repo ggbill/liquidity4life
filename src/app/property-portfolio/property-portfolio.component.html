@@ -1,0 +1,60 @@
+<div class="viewport" fxLayout="column">
+
+    <h2 class="top-gap">Property Portfolio</h2>
+
+    <div id="portfolio-container">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 bottom-gap">
+
+
+            <ng-container matColumnDef="propertyId">
+                <th mat-header-cell *matHeaderCellDef> Property ID </th>
+                <td mat-cell *matCellDef="let element">
+                    <a routerLink='/property-overview/{{element.propertyId}}'>{{element.propertyId}}</a>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="city">
+                <th mat-header-cell *matHeaderCellDef> City </th>
+                <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="propertyValue">
+                <th mat-header-cell *matHeaderCellDef> Property Value </th>
+                <td mat-cell *matCellDef="let element"> {{element.propertyValue}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="portfolioValue">
+                <th mat-header-cell *matHeaderCellDef> Portfolio Value </th>
+                <td mat-cell *matCellDef="let element"> {{element.portfolioValue}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="occupancyStartDate">
+                <th mat-header-cell *matHeaderCellDef> Occupancy Start Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.occupancyStartDate}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="occupancyEndDate">
+                <th mat-header-cell *matHeaderCellDef> Occupancy End Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.occupancyEndDate}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="projectedTerm">
+                <th mat-header-cell *matHeaderCellDef> ProjectedTerm </th>
+                <td mat-cell *matCellDef="let element"> {{element.projectedTerm}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="ragStatus">
+                <th mat-header-cell *matHeaderCellDef> RAG Status </th>
+                <td mat-cell *matCellDef="let element"> <div class="circle" [ngStyle]="{'background-color': element.ragStatus}"></div> </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="getDisplayedColumns()"></tr>
+            <tr mat-row *matRowDef="let row; columns: getDisplayedColumns();"></tr>
+        </table>
+    </div>
+</div>

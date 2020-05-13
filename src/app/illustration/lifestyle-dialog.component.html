@@ -1,0 +1,54 @@
+<div fxLayout="row" fxLayoutAlign="space-between">
+    <h2 class='no-top-margin'> Example Lifestyle Options Breakdown</h2>
+    <mat-icon id='close-dialog' (click)="onNoClick()">clear</mat-icon>
+</div>
+
+<mat-dialog-content>
+
+    <div class="intro-text">
+        <p>To use your own costs, please enter the monthly amount and check the box. To remove an item uncheck the box.</p>
+    </div>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!-- Checkbox Column -->
+        <ng-container matColumnDef="select">
+            <th mat-header-cell *matHeaderCellDef>
+                <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
+                    [indeterminate]="selection.hasValue() && !isAllSelected()">
+                </mat-checkbox>
+            </th>
+            <td mat-cell *matCellDef="let row">
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+                    [checked]="selection.isSelected(row)">
+                </mat-checkbox>
+            </td>
+            <td mat-footer-cell *matFooterCellDef></td>
+        </ng-container>
+
+        <ng-container matColumnDef="lifestyle">
+            <th mat-header-cell *matHeaderCellDef> Lifestyle </th>
+            <td mat-cell *matCellDef="let element">
+                {{element.lifestyle}}
+            </td>
+            <td mat-footer-cell *matFooterCellDef> Total </td>
+        </ng-container>
+
+        <ng-container matColumnDef="perMonth">
+            <th mat-header-cell *matHeaderCellDef> Per Month </th>
+            <td mat-cell *matCellDef="let element"> {{element.perMonth}} </td>
+            <td mat-footer-cell *matFooterCellDef> £300 </td>
+        </ng-container>
+
+        <ng-container matColumnDef="perAnnum">
+            <th mat-header-cell *matHeaderCellDef> Per Annum </th>
+            <td mat-cell *matCellDef="let element"> {{element.perAnnum}} </td>
+            <td mat-footer-cell *matFooterCellDef> £3,600 </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="getDisplayedColumns()"></tr>
+        <tr mat-row *matRowDef="let row; columns: getDisplayedColumns();"></tr>
+        <tr mat-footer-row *matFooterRowDef="getDisplayedColumns()"></tr>
+    </table>
+
+</mat-dialog-content>

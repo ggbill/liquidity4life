@@ -1,0 +1,21 @@
+.results-container td {
+    padding: 0 0 12px 0;
+    // border: solid 1px black;
+}
+
+.results-container td.label{
+    width:60%;
+}
+
+.results-container td.value{
+    width:40%;
+}
+
+#legal-title-section .mat-table,
+#charges-section .mat-table,
+#works-section .mat-table
+{
+    width: 100%;
+}
+
+

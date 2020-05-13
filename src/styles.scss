@@ -1,0 +1,124 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+/*******************Page Styling*****************/
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1em;
+    margin: 0;
+    color: #5E5E5E;
+}
+
+.viewport{
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+    padding:100px 12px 0 12px;
+}
+
+.content{
+    position: relative;
+    top: 100px;
+}
+
+.breadcrumb-container{
+    text-align: center;
+    margin: 0 0 25px 0;
+}
+
+.intro-text{
+    padding-bottom: 0px;
+}
+
+.top-gap{
+    margin-top: 55px;
+}
+
+.bottom-gap{
+    margin-bottom: 100px;
+}
+
+a{
+    color: blue;
+}
+/************************************/
+
+/*******************Inputs Section*****************/
+.inputs-container mat-icon{
+    color: rgba(0,0,0,.54);
+    position: relative;
+    top: 20px;
+}
+
+.inputs-container .mat-form-field{
+    width: 100%;
+}
+
+.slider-form-field {
+    padding-bottom: 24px;
+    width: 100%;
+}
+
+.slider-form-field label{
+    font-size: 0.75em;
+    color: rgba(0,0,0,.54);
+    position: relative;
+    top: -24px;
+}
+
+.input.slider{
+    padding-top: 25px;
+}
+/************************************/
+
+/*******************Table Section*****************/
+td.right-align{
+    text-align: right;
+}
+
+td.red{
+    color: red;
+}
+
+td.bold{
+    font-weight:bold;
+}
+/************************************/
+
+/*******************Button Section*****************/
+.button-section{
+    margin-top: 24px;
+}
+
+.mat-raised-button.l4l-button{
+    width: 200px;
+    background-color: #115E8C;
+    color:white;
+}
+
+@media only screen and (max-width: 599px) {
+
+    .mat-raised-button.l4l-button{
+        width: 100%;
+        margin-bottom: 12px;
+        height: 50px;
+    }
+
+    .button-section{
+        margin-top: 48px;
+    }
+
+}
+
+// .l4l-button mat-icon{
+//     position: relative;
+//     top: -1px;
+// }
+
+.l4l-button.right-side-gap{
+    margin-right: 12px;
+}
+/************************************/
+
+
+

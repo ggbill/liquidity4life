@@ -1,0 +1,46 @@
+#next-steps-container{
+    padding-top:24px;
+}
+
+#next-steps-container .big-text p{
+    font-size: 1.7em;
+    margin: 0;
+}
+
+.step{
+    // border:solid 1px black;
+    margin-bottom: 24px;
+}
+
+.step span{
+    color: white;
+    position: relative;
+    top: 15px;
+    left: 22px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.step p{
+    padding-left: 12px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#button-section{
+    margin: 48px 0 150px 0;
+}
+
+.circle{
+    min-height: 60px;
+    min-width: 60px;
+    border-radius: 50%;
+}
+
+.dark{
+    background-color: #115E8C;
+}
+
+.light{
+    background-color: #3CC3D6;
+}

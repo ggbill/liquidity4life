@@ -1,0 +1,31 @@
+<h2>Portfolio Performance</h2>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="label">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let element" [ngStyle]="{'font-weight':element.style}">{{element.label}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="yr2018">
+        <th mat-header-cell *matHeaderCellDef> 2018 </th>
+        <td mat-cell *matCellDef="let element" [ngStyle]="{'font-weight':element.style}"> {{element.yr2018}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="yr2019">
+        <th mat-header-cell *matHeaderCellDef> 2019 </th>
+        <td mat-cell *matCellDef="let element" [ngStyle]="{'font-weight':element.style}"> {{element.yr2019}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="yr2020">
+        <th mat-header-cell *matHeaderCellDef> 2020 </th>
+        <td mat-cell *matCellDef="let element" [ngStyle]="{'font-weight':element.style}"> {{element.yr2020}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="yr2021">
+        <th mat-header-cell *matHeaderCellDef> 2021 </th>
+        <td mat-cell *matCellDef="let element" [ngStyle]="{'font-weight':element.style}"> {{element.yr2021}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="getDisplayedColumns()"></tr>
+    <tr mat-row *matRowDef="let row; columns: getDisplayedColumns();"></tr>
+</table>

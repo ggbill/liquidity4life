@@ -1,0 +1,34 @@
+.no-top-margin{
+    margin-top: 0px;
+}
+
+#close-dialog{
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 12px;
+}
+
+table a{
+    color: blue;
+    outline: none;
+}
+
+.mat-column-perMonth {
+    text-align: center;
+}
+
+.mat-column-perAnnum {
+    text-align: center;
+}
+
+.mat-footer-row{
+    font-weight: bold;
+}
+
+td.mat-cell, th.mat-header-cell{
+    padding: 5px;
+}

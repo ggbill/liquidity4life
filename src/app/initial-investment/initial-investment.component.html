@@ -1,0 +1,200 @@
+<div class="viewport" fxLayout="column">
+    <div class="breadcrumb-container top-gap">
+        <app-breadcrumbs [activeRoute]="currentActivatedRoute"></app-breadcrumbs>
+    </div>
+    <h2>Property Sale and Initial Investment</h2>
+    <div class="intro-text">
+        <p>The table below provides a detailed breakdown of all of the costs involved in the sale of your home together
+            with
+            summary details of the reinvestment of the proceeds of sale.</p>
+    </div>
+    <div class="results-container">
+        <table>
+            <tr>
+                <td class="wide">
+                    Customer Name:
+                </td>
+                <td class="right-align">
+                    {{initialInvestmentData.name}}
+                </td>
+            </tr>
+            <tr>
+                <td class="wide">
+                    Property Post Code:
+                </td>
+                <td class="right-align">
+                    {{initialInvestmentData.postCode}}
+                </td>
+            </tr>
+            <tr class="spacer-row">
+            </tr>
+            <tr class="shaded-row">
+                <td class="wide bold">
+                    Property Purchase Price:
+                </td>
+                <td></td>
+                <td class="right-align bold">
+                    {{initialInvestmentData.propertyPurchasePrice | currency:"GBP":"symbol-narrow": "1.0"}}
+                </td>
+            </tr>
+            <tr class="spacer-row">
+            </tr>
+            <tr>
+                <td class="wide">
+                    Valuation & Survey:
+                </td>
+                <td class="right-align red">
+                    ({{initialInvestmentData.valuationSurvey | currency:"GBP":"symbol-narrow": "1.0"}})
+                </td>
+            </tr>
+            <tr>
+                <td class="wide">
+                    Legal & Conveyancing Fees:
+                </td>
+                <td class="right-align red">
+                    ({{initialInvestmentData.legalConveyancing | currency:"GBP":"symbol-narrow": "1.0"}})
+                </td>
+            </tr>
+            <tr>
+                <td class="wide">
+                    IFA Advice Fees:
+                </td>
+                <td class="right-align red">
+                    ({{initialInvestmentData.adviserFees | currency:"GBP":"symbol-narrow": "1.0"}})
+                </td>
+            </tr>
+            <tr>
+                <td class="wide">
+                    Establishment Charge:
+                </td>
+                <td class="right-align red">
+                    ({{initialInvestmentData.establishmentCharge | currency:"GBP":"symbol-narrow": "1.0"}})
+                </td>
+            </tr>
+            <!-- <tr>
+                <td class="wide">
+                    Building Work / Survey Findings:
+                </td>
+                <td class="right-align red">
+                    ({{initialInvestmentData.buildingWork | currency:"GBP":"symbol-narrow": "1.0"}})
+                </td>
+            </tr> -->
+            <tr class="spacer-row">
+            </tr>
+            <tr class="shaded-row">
+                <td class="wide bold">
+                    Net Sale Proceeds:
+                </td>
+                <td></td>
+                <td class="right-align bold">
+                    {{initialInvestmentData.netSaleProceeds | currency:"GBP":"symbol-narrow": "1.0"}}
+                </td>
+            </tr>
+            <tr class="spacer-row">
+            </tr>
+            <tr>
+                <td class="wide">
+                    Sale Proceeds Withdrawn:
+                </td>
+                <td class="right-align red">
+                    ({{initialInvestmentData.saleProceedsWithdrawn | currency:"GBP":"symbol-narrow": "1.0"}})
+                </td>
+            </tr>
+            <tr class="spacer-row">
+            </tr>
+            <tr class="shaded-row">
+                <td class="wide bold">
+                    Amount Available for Investment:
+                </td>
+                <td></td>
+                <td class="right-align bold">
+                    {{initialInvestmentData.investmentAmount | currency:"GBP":"symbol-narrow": "1.0"}}
+                </td>
+            </tr>
+            <tr class="spacer-row">
+            </tr>
+            <!-- <tr>
+                <td class="wide bold">
+                    Investment Amount:
+                </td>
+                <td class="right-align bold">
+                    {{initialInvestmentData.investmentAmount | currency:"GBP":"symbol-narrow": "1.0"}}
+                </td>
+            </tr>
+            <tr>
+                <td class="wide">
+                    &nbsp;
+                </td>
+                <td class="right-align">
+                    &nbsp;
+                </td>
+            </tr> -->
+            <tr>
+                <td class="wide">
+                    Property Fund Purchased:
+                </td>
+                <td class="right-align">
+                    {{initialInvestmentData.propertyFundPurchased | currency:"GBP":"symbol-narrow": "1.0"}}
+                </td>
+                <td fxHide.lt-md="true">
+                    Fund Units: {{initialInvestmentData.aUnits}}
+                </td>
+                <!-- <td fxHide.lt-md="true" class="right-align">
+                    {{initialInvestmentData.aUnits}}
+                </td> -->
+            </tr>
+            <tr>
+                <td class="wide">
+                    Income Portfolio Purchased:
+                </td>
+                <td class="right-align">
+                    {{initialInvestmentData.incomePortfolioPurchased | currency:"GBP":"symbol-narrow": "1.0"}}
+                </td>
+                <td fxHide.lt-md="true">
+                    Fund Units: {{initialInvestmentData.bUnits}}
+                </td>
+                <!-- <td fxHide.lt-md="true" class="right-align">
+                    {{initialInvestmentData.bUnits}}
+                </td> -->
+            </tr>
+            <tr>
+                <td class="wide">
+                    &nbsp;
+                </td>
+                <td class="right-align">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td class="wide">
+                    Adviser Name:
+                </td>
+                <td class="right-align">
+                    {{initialInvestmentData.adviserName}}
+                </td>
+            </tr>
+            <tr>
+                <td class="wide">
+                    Last Adviser Meeting Date:
+                </td>
+                <td class="right-align">
+                    {{initialInvestmentData.lastAdvisorMeeting}}
+                </td>
+            </tr>
+        </table>
+
+        <div id="document-store-link-section">
+            <a (click)="openDialog()">Document Store</a>
+        </div>
+
+        <div class='button-section bottom-gap' fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="flex-end">
+            <button mat-raised-button class="l4l-button right-side-gap" routerLink="/basic-details" fxFlexOrder.lt-sm="2">
+                Back
+            </button>
+            <button mat-raised-button class="l4l-button" routerLink="/illustration" fxFlexOrder.lt-sm="1">
+                Next
+            </button>
+        </div>
+
+    </div>
+</div>

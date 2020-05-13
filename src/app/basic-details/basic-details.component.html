@@ -1,0 +1,78 @@
+<div class="viewport" fxLayout="column">
+    <div class="breadcrumb-container top-gap">
+        <app-breadcrumbs [activeRoute]="currentActivatedRoute"></app-breadcrumbs>
+    </div>
+
+    <h2> Basic Details</h2>
+    <div class="intro-text">
+        <p>To help you find out if a Liquidity4Life Home Drawdown Plan could work for you, we need you to give us some basic
+            information first:</p>
+    </div>
+    <div class="inputs-container">
+        <mat-card>
+            <div class="input" id="full-name" fxLayout="row" fxLayoutAlign="space-between">
+                <mat-form-field color="primary">
+                    <input matInput placeholder="1. Full Name" [(ngModel)]="initialInvestmentData.name" required>
+                    <mat-error *ngIf="input.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+                <a routerLink="/basicdetails">
+                    <mat-icon> help_outline </mat-icon>
+                </a>
+            </div>
+            <div class="input" fxLayout="row" fxLayoutAlign="space-between">
+                <mat-form-field>
+                    <input matInput placeholder="2. Post Code" [(ngModel)]="initialInvestmentData.postCode" required>
+                    <mat-error *ngIf="input.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+                <a routerLink="/basicdetails">
+                    <mat-icon> help_outline </mat-icon>
+                </a>
+            </div>
+            <div class="input slider" fxLayout="row" fxLayoutAlign="space-between">
+                <div class="slider-form-field">
+                    <label>3. How much is your home worth?</label>
+                    <app-selection-bar-slider [defaultValue]="375000" [min]="250000" [max]="2000000" [step]="25000" [prefix]="'gbp'" [customSteps]=""></app-selection-bar-slider>
+                </div>
+                <a routerLink="/basicdetails">
+                    <mat-icon> help_outline </mat-icon>
+                </a>
+            </div>
+            <div class="input slider" fxLayout="row" fxLayoutAlign="space-between">
+                <div class="slider-form-field">
+                    <label>4. How much debt / loans do you have outstanding?</label>
+                    <app-selection-bar-slider [defaultValue]="0" [min]="0" [max]="1000000" [step]="25000" [prefix]="'gbp'" [customSteps]=""></app-selection-bar-slider>
+                </div>
+                <a routerLink="/basicdetails">
+                    <mat-icon> help_outline </mat-icon>
+                </a>
+            </div>
+            <div class="input slider" fxLayout="row" fxLayoutAlign="space-between">
+                <div class="slider-form-field">
+                    <label>5. How much would you like to take out up front as a lump sum?</label>
+                    <app-selection-bar-slider [defaultValue]="65000" [min]="0" [max]="1000000" [step]="5000" [prefix]="'gbp'" [customSteps]=""></app-selection-bar-slider>
+                </div>
+                <a routerLink="/basicdetails">
+                    <mat-icon> help_outline </mat-icon>
+                </a>
+            </div>
+            <div class="input slider" fxLayout="row" fxLayoutAlign="space-between">
+                <div class="slider-form-field">
+                    <label>6. How much income do you want to take out per annum?</label>
+                    <app-selection-bar-slider [defaultValue]="3600" [min]="0" [max]="100000" [step]="100" [prefix]="'gbp'" [customSteps]=""></app-selection-bar-slider>
+                </div>
+                <a routerLink="/basicdetails">
+                    <mat-icon> help_outline </mat-icon>
+                </a>
+            </div>
+        </mat-card>
+    </div>
+    <div class='button-section bottom-gap' fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="flex-end">
+        <button mat-raised-button class="l4l-button right-side-gap" routerLink="/" fxFlexOrder.lt-sm="2">
+            Cancel
+        </button>
+        <button mat-raised-button class="l4l-button" (click)="updateInitialInvestmentData()" routerLink="/initial-investment" fxFlexOrder.lt-sm="1">
+            Next
+        </button>
+    </div>
+
+</div>

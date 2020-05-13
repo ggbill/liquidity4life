@@ -1,0 +1,82 @@
+<div class="viewport" fxLayout="column">
+    <div class="breadcrumb-container top-gap">
+        <app-breadcrumbs [activeRoute]="currentActivatedRoute"></app-breadcrumbs>
+    </div>
+
+    <h2>Home Drawdown Example</h2>
+    <div class="intro-text">
+        <p>In the table at the bottom of the page you will see the projected value and investment returns, together
+            with the
+            projected income and expenditure for your Home Drawdown Plan based on the asset allocation of our
+            "Balanced
+            Portfolio".
+            Use the tools in the box below to alter the asset allocation.</p>
+    </div>
+
+    <div id="inputs-section" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="12px" fxLayoutAlign="start stretch" style="min-height:100%; padding-bottom: 12px;">
+        <div fxFlex="33%">
+            <mat-card style='height: calc(100% - 48px);'>
+                <p>
+                    Use the sliders to increase and decrease the projected investment performance and to see the
+                    results in the graph to the
+                    right and the grid below.
+                </p>
+                <p>
+                    Use the toggle buttons to add or remove the Utilities and Lifestyle options and click on the
+                    option
+                    to see what we have included
+                    in each option.
+                </p>
+                <app-illustration-double-slider [(value)]="value" [defaultValue]="3" [min]="1" [max]="5" [step]="2"
+                    [prefix]="'percent'" [customSteps]="'1,3,7'"></app-illustration-double-slider>
+
+                <div fxLayout="row" fxLayoutAlign="space-between">
+                    <p> A Unit Allocation:</p>
+                    <p> 40%</p>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-between">
+                    <p> B Unit Allocation:</p>
+                    <p> 60%</p>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-between" class="option-slider">
+                    <div>
+                        <p class='no-bottom-margin'>Include Lifestyle Options:</p>
+                        <a (click)="openDialog('lifestyle')"> Click to view lifestyle options</a>
+                    </div>
+                    <mat-slide-toggle [(ngModel)]="illustrationConfigData.isLifestyleOptions" color="primary" (change)="toggleData()">
+                    </mat-slide-toggle>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-between" class="option-slider">
+                    <div>
+                        <p class='no-bottom-margin'>Include Utility Options:</p>
+                        <a (click)="openDialog('utility')"> Click to view utility options</a>
+                    </div>
+                    <mat-slide-toggle [(ngModel)]="illustrationConfigData.isUtilitiesOptions" color="primary" (change)="toggleData()">
+                    </mat-slide-toggle>
+                </div>
+            </mat-card>
+        </div>
+        <div fxFlex='67%' ngStyle.lt-md="height: 500px">
+            <mat-card style='height: calc(100% - 48px);'>
+                <app-illustration-chart></app-illustration-chart>
+            </mat-card>
+        </div>
+    </div>
+
+    <div id="second-row" fxLayout="column" >
+        <div id="table-section">
+            <mat-card>
+                <app-illustration-table></app-illustration-table>
+            </mat-card>
+        </div>
+    </div>
+
+    <div class='button-section bottom-gap' fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="flex-end">
+        <button mat-raised-button class="l4l-button right-side-gap" routerLink="/initial-investment" fxFlexOrder.lt-sm="2">
+            Back
+        </button>
+        <button mat-raised-button class="l4l-button" routerLink="/controls" fxFlexOrder.lt-sm="1">
+            Next
+        </button>
+    </div>
+</div>

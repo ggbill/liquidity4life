@@ -1,0 +1,57 @@
+<div class="viewport" fxLayout="column">
+  <div class="breadcrumb-container top-gap">
+    <app-breadcrumbs [activeRoute]="currentActivatedRoute"></app-breadcrumbs>
+  </div>
+
+  <h2>Next Steps</h2>
+  <div class="intro-text">
+    <p>If you are interested to learn more about the Liquidity4Life Home Drawdown Plan, please check the box below and click
+      Next. You can then complete a simple application form which will be forwarded to your financial adviser with a detailed
+      illustration, so he can advise you accordingly.</p>
+  </div>
+
+  <div id="next-steps-container">
+      <div class="step big-text" fxLayout="row" fxLayoutAlign="flex-start center" >
+        <div class="circle light">
+          <span>1.</span>
+        </div>
+        <p>Fill out an 'Expression of Interest' questionnaire.</p>
+      </div>
+      <div class="step" fxLayout="row" fxLayoutAlign="flex-start center" >
+        <div class="circle dark">
+            <span>2.</span>
+        </div>
+        <p>Discuss which Liquidity4Life product is best suited to your needs with a financial adviser.</p>
+      </div>
+    
+  
+    
+      <div class="step" fxLayout="row" fxLayoutAlign="flex-start center" >
+        <div class="circle light">
+            <span>3.</span>
+        </div>
+        <p>Apply for the Liquidity4Life scheme.</p>
+      </div>
+      <div class="step" fxLayout="row" fxLayoutAlign="flex-start center" >
+        <div class="circle dark">
+            <span>4.</span>
+        </div>
+        <p>Start enjoying the benefits!</p>
+      </div>
+
+
+
+
+
+
+  <div class='button-section bottom-gap' fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="flex-end">
+    <button mat-raised-button class="l4l-button right-side-gap" routerLink="/controls" fxFlexOrder.lt-sm="2">
+      <!-- <mat-icon>chevron_left</mat-icon> -->
+      Back
+    </button>
+    <button mat-raised-button class="l4l-button" routerLink="/expression-of-interest" fxFlexOrder.lt-sm="1">
+      Next
+      <!-- <mat-icon>chevron_right</mat-icon> -->
+    </button>
+  </div>
+</div>
