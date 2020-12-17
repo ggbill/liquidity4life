@@ -1,0 +1,173 @@
+<div class="results-container" fxLayout="row" fxLayout.lt-sm="column">
+    <div id="property-column" fxLayout="column" fxFlex="1 1 50%">
+        <h2>Property Details</h2>
+        <table>
+            <tr>
+                <td class='label'>
+                    Property ID:
+                </td>
+                <td class="bold value">
+                    {{propertyData.propertyId}}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Address Line 1:
+                </td>
+                <td class="bold value">
+                    {{propertyData.addressLine1}}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Address Line 2:
+                </td>
+                <td class="bold value">
+                    {{propertyData.addressLine2}}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    City:
+                </td>
+                <td class="bold value">
+                    {{propertyData.city}}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Post Code:
+                </td>
+                <td class="bold value">
+                    {{propertyData.postCode}}
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="occupier-column" fxLayout="column" fxFlex="1 1 50%">
+        <h2>Occupier</h2>
+        <table>
+            <tr>
+                <td class='label'>
+                    Full Name:
+                </td>
+                <td class="bold value">
+                    {{propertyData.fullName}}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Home Number:
+                </td>
+                <td class="bold value">
+                    {{propertyData.homeNumber}}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Mobile Number:
+                </td>
+                <td class="bold value">
+                    {{propertyData.mobileNumber}}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Email Address:
+                </td>
+                <td class="bold value">
+                    {{propertyData.emailAddress}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="legal-title-section">
+
+    <h2>Legal Title</h2>
+    <table mat-table [dataSource]="legalTitleDataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="location">
+            <th mat-header-cell *matHeaderCellDef> Location </th>
+            <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef> Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="legalTitleDisplayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: legalTitleDisplayedColumns;"></tr>
+    </table>
+
+</div>
+
+<div id="charges-section">
+
+    <h2>Charges</h2>
+    <table mat-table [dataSource]="chargesDataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let element">
+                <i>No Charges</i>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"></td>
+        </ng-container>
+
+        <ng-container matColumnDef="location">
+            <th mat-header-cell *matHeaderCellDef> Location </th>
+            <td mat-cell *matCellDef="let element"> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef> Date </th>
+            <td mat-cell *matCellDef="let element"></td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="chargesDisplayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: chargesDisplayedColumns;"></tr>
+    </table>
+
+</div>
+
+<div id="works-section">
+
+    <h2>List of Works</h2>
+    <table mat-table [dataSource]="worksDataSource" class="mat-elevation-z8">
+
+            <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef> ID </th>
+                    <td mat-cell *matCellDef="let element">{{element.id}}</td>
+                </ng-container>
+
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name of Firm </th>
+                <td mat-cell *matCellDef="let element">{{element.name}}</td>
+            </ng-container>
+    
+            <ng-container matColumnDef="type">
+                <th mat-header-cell *matHeaderCellDef> Type </th>
+                <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef> Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+            </ng-container>
+    
+            <tr mat-header-row *matHeaderRowDef="getWorksDisplayedColumns()"></tr>
+            <tr mat-row *matRowDef="let row; columns: getWorksDisplayedColumns();"></tr>
+        </table>
+
+</div>

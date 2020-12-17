@@ -1,0 +1,38 @@
+<div class="viewport" fxLayout="column">
+
+    <h2 class="top-gap">Property 001</h2>
+    <div class="rag-container" fxLayout="row" fxLayoutAlign="flex-start center">
+        <div class="rag"></div>
+        <div class="rag-message">No Control Warnings Detected</div>
+    </div>
+
+    <mat-tab-group dynamicHeight>
+        <mat-tab label="KEY METRICS">
+            <div class="tab-content">
+                <app-key-metrics></app-key-metrics>
+            </div>
+        </mat-tab>
+        <mat-tab label="PORTFOLIO PERFORMANCE">
+            <div class="tab-content">
+                <app-portfolio-performance></app-portfolio-performance>
+            </div>
+        </mat-tab>
+        <mat-tab label="PROPERTY DETAILS">
+            <div class="tab-content">
+                <app-property-details></app-property-details>
+            </div>
+        </mat-tab>
+        <mat-tab label="ADVISER DETAILS">
+            <div class="tab-content">
+                <app-adviser-details></app-adviser-details>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
+    <div class='button-section bottom-gap' fxLayoutAlign="flex-end">
+        <button mat-raised-button class="l4l-button" routerLink="/property-portfolio">
+            Back
+        </button>
+    </div>
+
+</div>

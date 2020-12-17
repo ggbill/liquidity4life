@@ -1,0 +1,202 @@
+<div class="viewport" fxLayout="column">
+    <div class="breadcrumb-container top-gap">
+        <app-breadcrumbs [activeRoute]="currentActivatedRoute"></app-breadcrumbs>
+    </div>
+
+    <h2>Controls</h2>
+    <div class="intro-text">
+        <p>Liquidity4Life will use its systems to monitor your plan.</p>
+    </div>
+
+    <div class="results-container" fxLayout="row" fxLayout.lt-sm="column">
+        <div class="table-1-container">
+            <table>
+                <tr>
+                    <td>
+                        Name:
+                    </td>
+                    <td class="bold">
+                        {{initialInvestmentData.name}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Product:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.product}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Plan:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.plan}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Holdings:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.holdings}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Application:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.application}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Adviser Name:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.adviserName}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Adviser CPD Products:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.adviserCPDProducts}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Adviser CPD Date:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.adviserCPDDate}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Adviser Customer Meeting:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.adviserCustomerMeeting}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Adviser Notice Date:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.adviserNoticeDate}}
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="table-2-container">
+            <table>
+                <tr>
+                    <td>
+                        Risk Profile:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.riskProfile}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Portfolio Value:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.portfolioValue}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        lifestyleOptions:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.lifestyleOptions}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Utility Payments:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.utilityPayments}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Property Costs:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.propertyCosts}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Cost Review Term:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.costReviewTerm}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Cost Review Date:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.costReviewDate}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Occupancy End Date:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.occupancyEndDate}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Occupancy Notice Period:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.occupancyNoticePeriod}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Local Authority Adviser Date:
+                    </td>
+                    <td class="bold">
+                        {{controlsData.localAuthorityAdviserDate}}
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <div class="bottom-gap flex-wrapper" fxLayoutAlign="flex-end flex-end">
+        <div class="button-wrapper" fxLayout="column" fxLayoutAlign="center center">
+            <div class='button-section' fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="flex-end">
+                <button mat-raised-button class="l4l-button right-side-gap" routerLink="/illustration" fxFlexOrder.lt-sm="2">
+                    Back
+                </button>
+                <button mat-raised-button class="l4l-button" routerLink="/" fxFlexOrder.lt-sm="1">
+                    Finish
+                </button>  
+            </div>
+            <span>or</span>
+            <a href="#" routerLink="/property-portfolio">Take me to the Admin Portal</a>
+        </div>
+        
+        
+    </div>
+
+    
+</div>

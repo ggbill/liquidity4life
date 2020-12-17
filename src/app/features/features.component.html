@@ -1,0 +1,79 @@
+<div class="viewport" fxLayout="column">
+    <div class="breadcrumb-container top-gap">
+        <app-breadcrumbs [activeRoute]="currentActivatedRoute"></app-breadcrumbs>
+    </div>
+
+    <h2>Features</h2>
+
+    <div id="features-container" fxLayout="column">
+        <div id="row-1" fxLayout="row" fxLayout.lt-sm="column">
+            <div class="feature" fxLayout="row" fxLayoutAlign="flex-start center" fxFlexOrder.lt-sm="2">
+                <div class="circle light">
+                    <mat-icon>done</mat-icon>
+                </div>
+                <p>Access 100% of your property value.</p>
+            </div>
+
+            <div class="feature" fxLayout="row" fxLayoutAlign="flex-start center" fxFlexOrder.lt-sm="1">
+                <div class="circle dark">
+                    <mat-icon>done</mat-icon>
+                </div>
+                <p>Continue to live in your property with flexibility to move or downsize.</p>
+            </div>
+        </div>
+
+        <div id="row-2" fxLayout="row" fxLayout.lt-sm="column">
+            <div class="feature" fxLayout="row" fxLayoutAlign="flex-start center" >
+                <div class="circle dark">
+                    <mat-icon>done</mat-icon>
+                </div>
+                <p>Create sustainable income in retirement.</p>
+            </div>
+
+            <div class="feature" fxLayout="row" fxLayoutAlign="flex-start center" >
+                <div class="circle light">
+                    <mat-icon>done</mat-icon>
+                </div>
+                <p>Link lifestyle and utility payments to your assets.</p>
+            </div>
+        </div>
+
+        <div id="row-3" fxLayout="row" fxLayout.lt-sm="column">
+            <div class="feature" fxLayout="row" fxLayoutAlign="flex-start center" fxFlexOrder.lt-sm="2">
+                <div class="circle light">
+                    <mat-icon>done</mat-icon>
+                </div>
+                <p>Change your quality of life short term/long term.</p>
+            </div>
+
+            <div class="feature" fxLayout="row" fxLayoutAlign="flex-start center" fxFlexOrder.lt-sm="1">
+                <div class="circle dark">
+                    <mat-icon>done</mat-icon>
+                </div>
+                <p>Finance your future health and social care needs.</p>
+            </div>
+        </div>
+
+        <div id="row-3" fxLayout="row" fxLayout.lt-sm="column">
+
+            <div class="feature" fxLayout="row" fxLayoutAlign="flex-start center">
+                <div class="circle dark">
+                    <mat-icon>done</mat-icon>
+                </div>
+                <p>Full flexibility to match your drawdown to changing circumstances.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class='button-section bottom-gap' fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="flex-end">
+        <button mat-raised-button class="l4l-button right-side-gap" routerLink="/illustration" fxFlexOrder.lt-sm="2">
+            Back
+        </button>
+        <button mat-raised-button class="l4l-button" routerLink="/controls" fxFlexOrder.lt-sm="1">
+            Next
+        </button>
+
+    </div>

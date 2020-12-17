@@ -1,0 +1,16 @@
+<div class="input slider " id='property-performance-slider'>
+    <div class="slider-form-field">
+        <label>Property Portfolio Performance:</label>
+        <!-- <app-selection-bar-slider [(newValue)]="newValue" [defaultValue]="3" [min]="1" [max]="5" [step]="2" [prefix]="'percent'" [customSteps]="'1,3,7'"></app-selection-bar-slider> -->
+        <ng5-slider [(value)]="illustrationConfigData.performancePercentage" [options]="options" class="double-slider" (userChangeEnd)="toggleData()"></ng5-slider>
+    </div>
+</div>
+
+<div class="input slider" id='income-performance-slider'>
+    <div class="slider-form-field">
+        <label>Income Portfolio Performance:</label>
+        <!-- <app-selection-bar-slider [(newValue)]="newValue" [defaultValue]="3" [min]="1" [max]="5" [step]="2" [prefix]="'percent'" [customSteps]="'1,3,7'"></app-selection-bar-slider> -->
+        <ng5-slider [(value)]="illustrationConfigData.performancePercentage" [options]="options" class="double-slider" (userChangeEnd)="toggleData()"></ng5-slider>
+    </div>
+</div>
+

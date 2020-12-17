@@ -1,0 +1,91 @@
+.home-viewport{
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+    padding:12px;
+    // background-color: pink
+}
+
+.hero-image{
+    margin-top: 80px;
+    height:50vh;
+    background-image: url("../../assets/images/house-banner.jpg");
+        // background-color:red;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.cta-section{
+    background-color:#115E8C;
+    padding: 12px;
+    color:white;
+    max-width: 550px;
+    position:relative;
+    top: -170px;
+}
+
+.cta-section h1{
+    line-height: 1.2em;
+}
+
+.cta-section h4{
+    font-weight: normal
+}
+
+button#get-started{
+    background-color: #3CC3D6;
+    height: 45px;
+    width: 170px;
+    margin-bottom: 20px;
+}
+
+.intro-text{
+    font-size: 1.1em;
+    color: #5E5E5E;
+    padding-bottom: 75px;
+    position: relative;
+    top: -50px;
+}
+
+.features-container{
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fill, 360px);
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.features-container mat-card {
+    max-width:380px;
+    padding: 0px;
+    text-align: center;
+}
+
+.features-container mat-card-title {
+    min-height: 60px;
+}
+
+.features-container mat-card-content {
+    min-height: 35px;
+}
+
+.features-container mat-card-actions {
+    margin: 0;
+}
+
+.features-container .padding {
+    padding: 12px;
+    
+}
+
+.features-container mat-card img {
+    width:100%;
+}
+
+.features-container mat-icon{
+    position: relative;
+    top: -1px;
+}
+
+

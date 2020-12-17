@@ -1,0 +1,48 @@
+.slider-form-field label {
+    font-size: 1.1em;
+    color: black;
+}
+
+::ng-deep {
+    
+
+    app-illustration-double-slider .ng5-slider-span.ng5-slider-bubble.ng5-slider-limit{
+        top: 8px;
+        font-size: 0.75em;
+    }
+
+    app-illustration-double-slider .ng5-slider .ng5-slider-pointer.ng5-slider-active:after{
+        background-color: white;
+    }
+
+    app-illustration-double-slider .ng5-slider .ng5-slider-pointer.ng5-slider-active:focus{
+        outline: none;
+    }
+
+    app-illustration-double-slider .ng5-slider .ng5-slider-pointer {
+        width: 35px;
+        height: 35px;
+        top: -15px;
+        border-radius: 50%;
+        background-color: #3CC3D6;
+    }
+
+    
+    app-illustration-double-slider .ng5-slider .ng5-slider-selection {
+        background: #3CC3D6;
+    }
+
+    app-illustration-double-slider .ng5-slider .ng5-slider-pointer:after {
+        width: 10px;
+        height: 10px;
+        top: 13px;
+        left: 13px;
+        border-radius: 50%;
+    }
+
+    app-illustration-double-slider .ng5-slider .ng5-slider-bubble{
+        bottom: 29px;
+
+    }
+
+}

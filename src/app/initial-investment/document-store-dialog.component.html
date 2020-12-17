@@ -1,0 +1,47 @@
+<div fxLayout="row" fxLayoutAlign="space-between">
+    <h2 class='no-top-margin'> Document Store</h2>
+    <mat-icon id='close-dialog' (click)="onNoClick()">clear</mat-icon>
+</div>
+
+<mat-dialog-content>
+
+<div class="intro-text">
+    <p>Below is a list of documents relating to your account.</p>
+</div>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element">
+            <a href=''>{{element.id}}</a>
+        </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="version" >
+        <th mat-header-cell *matHeaderCellDef> Version </th>
+        <td mat-cell *matCellDef="let element"> {{element.version}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="date" >
+        <th mat-header-cell *matHeaderCellDef> Upload / Edit Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="getDisplayedColumns()"></tr>
+    <tr mat-row *matRowDef="let row; columns: getDisplayedColumns();"></tr>
+</table>
+
+</mat-dialog-content>

@@ -1,0 +1,44 @@
+
+#first-row{
+    padding-bottom: 12px;
+    height:100%;
+}
+
+#graph-section mat-card{
+    height: 567px;
+    // height: 100%;
+}
+
+#inputs-section{
+    font-size: 0.9em;
+}
+
+#inputs-section a{
+    text-decoration: none;
+    color: blue;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+#inputs-section mat-slide-toggle{
+    padding-top: 11px;
+}
+
+p.no-bottom-margin{
+    margin-bottom: -2px !important;
+}
+
+::ng-deep {
+
+.mat-slide-toggle.mat-primary.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: rgb(60, 195, 214);
+}
+
+.mat-slide-toggle.mat-primary.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: rgba(60, 195, 214, .5);
+}
+
+}
+
+
+

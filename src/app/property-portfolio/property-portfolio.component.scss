@@ -1,0 +1,24 @@
+table{
+    width:100%;
+}
+
+.circle{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 0 auto 0 auto;
+}
+
+.mat-column-propertyValue,
+.mat-column-portfolioValue,
+.mat-column-occupancyStartDate,
+.mat-column-occupancyEndDate,
+.mat-column-projectedTerm,
+.mat-column-ragStatus {
+    text-align: center;
+}
+
+td.mat-cell, th.mat-header-cell{
+    padding: 5px;
+}
+

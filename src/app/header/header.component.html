@@ -1,0 +1,55 @@
+<mat-toolbar class='app-toolbar mat-elevation-z4'>
+    <div class="header-viewport"  fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="flex-start center">
+        
+            <div class="logo-container">
+                <a  routerLink="">
+                    <img src="../../assets/images/Home Drawndown logo.png"/>
+                </a>
+            </div>
+            <div class="quicklinks-container" fxHide.lt-md="true">
+                <ul>
+                    <li>
+                        <a routerLink="">OUR SERVICES</a>
+                    </li>
+                    <li>
+                        <a routerLink="">PRODUCTS</a>
+                    </li>
+                    <li>
+                        <a routerLink="">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- <div class='hidden'  style="border: solid 1px gray" >hidden</div> -->
+
+            <div class="login-buttons" fxHide.lt-md="true" >
+                <button mat-raised-button id='client-login'>
+                    <mat-icon>account_circle</mat-icon>
+                    CLIENT LOGIN
+                </button>
+                <button mat-raised-button id='adviser-login' routerLink="/property-portfolio">
+                    <mat-icon>account_circle</mat-icon>
+                    ADMIN LOGIN
+                </button>
+            </div>
+
+            <div class="hamburger" fxShow="false" fxShow.lt-md="true">
+                <button type="button" mat-icon-button [matMenuTriggerFor]="menu" >
+                    <mat-icon>menu</mat-icon>
+                </button>
+        
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item >OUR SERVICES</button>
+                    <button mat-menu-item >PRODUCTS</button>
+                    <button mat-menu-item >FAQ</button>
+                    <button mat-menu-item >CLIENT LOGIN</button>
+                    <button mat-menu-item >ADVISER LOGIN</button>
+                </mat-menu>
+
+            </div>
+       
+
+        
+    </div>
+  
+</mat-toolbar>

@@ -1,0 +1,44 @@
+::ng-deep {
+    app-selection-bar-slider .ng5-slider{
+        
+    }
+
+    app-selection-bar-slider .ng5-slider-span.ng5-slider-bubble.ng5-slider-limit{
+        top: 8px;
+        font-size: 0.75em;
+    }
+
+    app-selection-bar-slider .ng5-slider .ng5-slider-pointer.ng5-slider-active:after{
+        background-color: white;
+    }
+
+    app-selection-bar-slider .ng5-slider .ng5-slider-pointer.ng5-slider-active:focus{
+        outline: none;
+    }
+
+    app-selection-bar-slider .ng5-slider .ng5-slider-pointer {
+        width: 47px;
+        height: 47px;
+        top: -21px;
+        border-radius: 50%;
+        background-color: #3CC3D6;
+    }
+
+    app-selection-bar-slider .ng5-slider .ng5-slider-selection {
+        background: #3CC3D6;
+      }
+
+    app-selection-bar-slider .ng5-slider .ng5-slider-pointer:after {
+        width: 12px;
+        height: 12px;
+        top: 18px;
+        left: 18px;
+        border-radius: 50%;
+    }
+
+    app-selection-bar-slider .ng5-slider .ng5-slider-bubble{
+        bottom: 29px;
+
+    }
+
+}

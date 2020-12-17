@@ -1,0 +1,97 @@
+.header-viewport{
+    width: 1200px;
+    margin: 0 auto 0 auto;
+    padding:12px;
+    // background-color: pink
+}
+
+.app-toolbar {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    z-index: 1000;
+    height:80px;
+    background-color: white;
+    padding: 0;
+}
+
+.app-toolbar img{
+    height:50px;
+    padding: 5px 24px 0 0;
+}
+
+.logo-container{
+    // flex-grow: 1;
+    // flex-basis: 1;
+}
+
+.quicklinks-container{
+    // flex-grow: 1;
+    // flex-basis: 1;
+}
+
+.hidden{
+    // flex-grow: 2;
+    // flex-basis: 1;
+}
+
+.login-buttons{
+    // flex-grow: 1;
+    // flex-basis: 1;
+    margin: 0 0 0 auto;
+}
+
+
+.quicklinks-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.quicklinks-container li {
+    float: left;
+}
+
+.quicklinks-container li a {
+    display: block;
+    font-size: 14px;
+    color: #5E5E5E;
+    text-align: center;
+    padding: 12px 24px 12px 24px;
+    text-decoration: none;
+}
+
+
+
+button#client-login{
+    background-color: #3CC3D6;
+    color: white;
+    margin-right: 12px;
+}
+
+button#adviser-login{
+    background-color: #115E8C;
+    color:white;
+}
+
+.login-buttons mat-icon{
+    position: relative;
+    top:-1px;
+}
+
+.hamburger{
+    margin: 0 0 0 auto;
+    color:#115E8C;
+    
+}
+
+
+
+
+
+
+
+
+
+

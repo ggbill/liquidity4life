@@ -1,0 +1,62 @@
+<!-- <p>Utilities: {{illustrationConfigData.isUtilitiesOptions}}</p>
+<p>Lifestyle: {{illustrationConfigData.isLifestyleOptions}}</p>
+<p>PerformancePercentage: {{illustrationConfigData.performancePercentage}}</p>
+<p>IllustrationData: {{illustrationConfigData.illustrationTableData}}</p> -->
+
+
+<table mat-table [dataSource]="illustrationConfigData.illustrationTableData">
+
+
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let element" >{{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="yr1">
+        <th mat-header-cell *matHeaderCellDef> 1 </th>
+        <td mat-cell *matCellDef="let element"> {{element.yr1}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="yr5">
+        <th mat-header-cell *matHeaderCellDef> 5 </th>
+        <td mat-cell *matCellDef="let element"> {{element.yr5}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="yr10">
+        <th mat-header-cell *matHeaderCellDef> 10 </th>
+        <td mat-cell *matCellDef="let element"> {{element.yr10}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="yr15">
+        <th mat-header-cell *matHeaderCellDef> 15 </th>
+        <td mat-cell *matCellDef="let element"> {{element.yr15}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="yr16">
+        <th mat-header-cell *matHeaderCellDef> 16 </th>
+        <td mat-cell *matCellDef="let element"> {{element.yr16}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="yr17">
+        <th mat-header-cell *matHeaderCellDef> 17 </th>
+        <td mat-cell *matCellDef="let element"> {{element.yr17}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="yr18">
+        <th mat-header-cell *matHeaderCellDef> 18 </th>
+        <td mat-cell *matCellDef="let element"> {{element.yr18}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="yr19">
+        <th mat-header-cell *matHeaderCellDef> 19 </th>
+        <td mat-cell *matCellDef="let element"> {{element.yr19}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="yr20">
+        <th mat-header-cell *matHeaderCellDef> 20 </th>
+        <td mat-cell *matCellDef="let element"> {{element.yr20}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="getDisplayedColumns()"></tr>
+    <tr mat-row *matRowDef="let row; columns: getDisplayedColumns(); let i = index;" [ngClass]="{'bold': i == 0 || i == 4}"></tr>
+</table>

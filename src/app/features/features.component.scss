@@ -1,0 +1,51 @@
+#features-container{
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(auto-fill, 380px);
+    grid-template-columns: 50% 50%;
+}
+
+.feature{
+    width: 50%;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    height: 100px;
+}
+
+
+@media only screen and (max-width: 599px) {
+
+    .feature{
+        width: 100%;
+    }
+
+}
+
+.feature mat-icon{
+    color: white;
+    position: relative;
+    top: 18px;
+    left: 18px;
+}
+
+.feature p{
+    padding-left: 12px;
+}
+
+#button-section{
+    margin: 48px 0 150px 0;
+}
+
+.circle{
+    min-height: 60px;
+    min-width: 60px;
+    border-radius: 50%;
+}
+
+.dark{
+    background-color: #115E8C;
+}
+
+.light{
+    background-color: #3CC3D6;
+}
