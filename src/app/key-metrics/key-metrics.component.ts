@@ -23,7 +23,9 @@ export class KeyMetricsComponent implements OnInit {
         propertyCosts: "£10,174",
         occupancy12MonthAdvisery: "31/07/2037",
         occupancy: "Sole",
-        localAuthorityNoticePeriod: "31/01/2038"
+        localAuthorityNoticePeriod: "31/01/2038",
+        clientAge: "72 years, 4 months",
+        clientDob: "28/10/1948",
     };
 
     constructor() { }
