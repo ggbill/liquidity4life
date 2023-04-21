@@ -88,7 +88,7 @@ export class SevenPcNoLifeUtilsService {
                 "yr20": 160152.8137
             },
             {
-                "name": "B36 Units",
+                "name": "F36 Units",
                 "yr1": 175500,
                 "yr2": 170039.8125,
                 "yr3": 157708.2257,
@@ -249,7 +249,7 @@ export class SevenPcNoLifeUtilsService {
                 "yr20": 16063.7223
             },
             {
-                "name": "B Unit Gains",
+                "name": "F Unit Gains",
                 "yr1": 0,
                 "yr2": -6631.552688,
                 "yr3": 8303.338085,

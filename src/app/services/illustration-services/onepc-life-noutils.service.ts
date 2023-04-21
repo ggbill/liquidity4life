@@ -89,7 +89,7 @@ export class OnePcLifeNoUtilsService {
                 "yr20": 55784.88529
             },
             {
-                "name": "B36 Units",
+                "name": "F36 Units",
                 "yr1": 175500,
                 "yr2": 175199.0625,
                 "yr3": 175781.7239,
@@ -250,7 +250,7 @@ export class OnePcLifeNoUtilsService {
                 "yr20": 295.5577506
             },
             {
-                "name": "B Unit Gains",
+                "name": "F Unit Gains",
                 "yr1": 4738.5,
                 "yr2": 5956.768125,
                 "yr3": 6679.705508,

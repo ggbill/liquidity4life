@@ -14,16 +14,16 @@ export class InitialInvestmentDataService {
         valuationSurvey: 750,
         legalConveyancing: 2500,
         adviserFees: 10500,
-        establishmentCharge: 7000,
-        netSaleProceeds: 329250,
-        saleProceedsWithdrawn: 36750,
+        establishmentCharge: 3500,
+        netSaleProceeds: 343250,
+        saleProceedsWithdrawn: 50750,
         investmentAmount: 292500,
         propertyFundPurchased: 117000,
         incomePortfolioPurchased: 175500,
         aUnits: "A1",
-        bUnits: "B36",
+        bUnits: "F36",
         adviserName: "Mr. G. Advice",
-        lastAdvisorMeeting: "01/08/2019" 
+        lastAdvisorMeeting: "01/08/2022" 
     });
 
     cast = this.initialInvestmentData.asObservable();

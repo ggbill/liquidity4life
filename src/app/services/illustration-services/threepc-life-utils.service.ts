@@ -87,7 +87,7 @@ export class ThreePcLifeUtilsService {
                 "yr20": 0
             },
             {
-                "name": "B36 Units",
+                "name": "F36 Units",
                 "yr1": 175500,
                 "yr2": 174724.3125,
                 "yr3": 168747.6867,
@@ -248,7 +248,7 @@ export class ThreePcLifeUtilsService {
                 "yr20": 0
             },
             {
-                "name": "B Unit Gains",
+                "name": "F Unit Gains",
                 "yr1": 6844.5,
                 "yr2": 2271.416063,
                 "yr3": 1974.347934,
